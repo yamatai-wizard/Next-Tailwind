@@ -1,0 +1,20 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[markdown]": {
+      "editor.formatOnSave": false
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    },
+    "eslint.validate": ["html", "javascriptreact", "typescriptreact"],
+    "css.validate": false,
+    "scss.validate": false,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }

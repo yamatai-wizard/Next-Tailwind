@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { PlusIcon as PlusIconOutline } from '@heroicons/react/24/outline'
+
 
 const Home: NextPage = () => {
   return (
@@ -28,9 +30,9 @@ const Home: NextPage = () => {
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
           <a
             href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-red-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <h3 className="text-2xl font-normal">Documentation &rarr;</h3>
             <p className="mt-4 text-xl">
               Find in-depth information about Next.js features and its API.
             </p>
@@ -66,6 +68,12 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
+        <button
+        type="button"
+        className="inline-flex items-center rounded-full border border-transparent bg-indigo-600 p-3 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      >
+        <PlusIconOutline className="h-6 w-6" aria-hidden="true" />
+      </button>
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
