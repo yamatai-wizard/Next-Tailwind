@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
@@ -49,10 +50,8 @@ const tabs = [
 ];
 const profile = {
   name: "山村大樹",
-  imageUrl:
-    "https://lh6.googleusercontent.com/proxy/eQCTbPqkJcYSI4If1-mrkBcBXlpAo0Mr5T2frQ_AAdZeTjOXiyj3G7DSsqD2CcoOkhANyL_rwRZflja7BCBAEylm2Gk3pyRw5wIzs3EnRxi6CzH9MhTsMU7KJg=w1200-h630-p-k-no-nu",
-  coverImageUrl:
-    "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  imageUrl: "/image/profile.jpg",
+  coverImageUrl: "/image/background.jpg",
   about: `
     <p>はじめまして！東京医科歯科大学医学部一年の山村大樹と申します。</p>
     <p>現在は医学生として医学を学ぶ傍ら、YE Connectでプログラマーとしてのスキルを身につけるためインターンに励んでいます。将来は、医師とエンジニアのダブルフリーランス、プログラミングを利用した医療×AI関連での起業、両方の経験をもとに活躍できるコンサルなど幅広くキャリアを考えています。また、英語も得意なので4年か6年次に海外に留学し、海外で働くことも視野に入れていきたいと考えています。</p>
