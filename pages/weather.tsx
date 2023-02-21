@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Weather = () => {
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState([]);
   const [weatherUrl, setWeatherUrl] = useState(
     "https://weather.tsukumijima.net/api/forecast/city/130010"
   );
@@ -11,7 +11,7 @@ const Weather = () => {
     axios
       .get(weatherUrl)
       .then((res) => {
-        setWeather(res.data);
+        setWeather(res.data.forecasts);
       })
       .catch((err) => {
         console.log(err);
@@ -23,10 +23,16 @@ const Weather = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {weather.title}
+            {weatherUrl ===
+            "https://weather.tsukumijima.net/api/forecast/city/130010"
+              ? "東京都　東京の天気"
+              : "滋賀県　彦根の天気"}
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            {weather.title}
+            {weatherUrl ===
+            "https://weather.tsukumijima.net/api/forecast/city/130010"
+              ? "東京都　東京"
+              : "滋賀県　彦根"}
             の今日、明日、明後日の三日間の天気予報です。雨の日は傘を忘れないようにしましょう！
           </p>
         </div>
@@ -34,8 +40,8 @@ const Weather = () => {
           role="list"
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
-          {weather.forecasts?.map((forecast) => (
-            <li key={forecast.telop}>
+          {weather.map((forecast) => (
+            <li>
               <img
                 className="aspect-[3/2] w-full rounded-2xl object-cover"
                 src={forecast.image.url}
