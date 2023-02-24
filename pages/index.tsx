@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { PlusIcon as PlusIconOutline } from "@heroicons/react/24/outline";
+import Button from "../components/button";
 
 const Home: NextPage = () => {
   return (
@@ -68,12 +69,7 @@ const Home: NextPage = () => {
           </a>
         </div>
         <a href="https://next-tailwind-weld.vercel.app/login">
-          <button
-            type="button"
-            className="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            Login
-          </button>
+          <Button text="Login" color="bg-orange-600" />
         </a>
       </main>
 
