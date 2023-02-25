@@ -112,7 +112,7 @@ const toDo = () => {
                       </td>
                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                         <span className="isolate inline-flex rounded-md shadow-sm">
-                          <Link href={`/toDo2/${toDoItem.id}`}>
+                          <Link href={`/toDoList/${toDoItem.id}`}>
                             <button
                               type="button"
                               className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-black-500 focus:outline-none focus:ring-1 focus:ring-black-500"
